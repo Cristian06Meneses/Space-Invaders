@@ -32,6 +32,8 @@
             this.pic_enemigo = new System.Windows.Forms.PictureBox();
             this.pic_amigo = new System.Windows.Forms.PictureBox();
             this.tmr1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_puntos = new System.Windows.Forms.Label();
+            this.lbl_nivel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_enemigo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_amigo)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +65,30 @@
             this.tmr1.Enabled = true;
             this.tmr1.Tick += new System.EventHandler(this.tmr1_Tick);
             // 
+            // lbl_puntos
+            // 
+            this.lbl_puntos.AutoSize = true;
+            this.lbl_puntos.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_puntos.Font = new System.Drawing.Font("Magneto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_puntos.ForeColor = System.Drawing.Color.Red;
+            this.lbl_puntos.Location = new System.Drawing.Point(654, 422);
+            this.lbl_puntos.Name = "lbl_puntos";
+            this.lbl_puntos.Size = new System.Drawing.Size(78, 19);
+            this.lbl_puntos.TabIndex = 2;
+            this.lbl_puntos.Text = "Puntos: ";
+            // 
+            // lbl_nivel
+            // 
+            this.lbl_nivel.AutoSize = true;
+            this.lbl_nivel.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_nivel.Font = new System.Drawing.Font("Magneto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_nivel.ForeColor = System.Drawing.Color.Red;
+            this.lbl_nivel.Location = new System.Drawing.Point(12, 422);
+            this.lbl_nivel.Name = "lbl_nivel";
+            this.lbl_nivel.Size = new System.Drawing.Size(65, 19);
+            this.lbl_nivel.TabIndex = 3;
+            this.lbl_nivel.Text = "Nivel 1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -71,8 +97,10 @@
             this.BackgroundImage = global::Trabajodeclase2HP2.Properties.Resources.espaciospaceinv;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_nivel);
             this.Controls.Add(this.pic_amigo);
             this.Controls.Add(this.pic_enemigo);
+            this.Controls.Add(this.lbl_puntos);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -80,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_enemigo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_amigo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -88,5 +117,7 @@
         private PictureBox pic_enemigo;
         private PictureBox pic_amigo;
         private System.Windows.Forms.Timer tmr1;
+        private Label lbl_puntos;
+        private Label lbl_nivel;
     }
 }

@@ -31,8 +31,8 @@ namespace Trabajodeclase2HP2
 
                 if (bala.Location.X == posicion_ene.X && bala.Location.Y == posicion.Y)
                 {
-                    puntos = puntos + 1;
-
+                    puntos = puntos + 100;
+                    break;
                 }
 
                 i = i - 10;

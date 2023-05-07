@@ -3,7 +3,8 @@ namespace Trabajodeclase2HP2
     public partial class Form1 : Form
     {
         bool direccion = true;
-
+        int puntos = 0;
+        int nivel = 1;
         public Form1()
         {
             InitializeComponent();
@@ -50,6 +51,9 @@ namespace Trabajodeclase2HP2
                 pic_enemigo.Location = inicio;
 
                 tmr1.Interval = tmr1.Interval - 10;
+                nivel = nivel + 1;
+
+                lbl_nivel.Text = "Nivel " + nivel;
             }
 
             if (tmr1.Interval == 0)
@@ -77,15 +81,15 @@ namespace Trabajodeclase2HP2
                 pic_amigo.Location = posicion;
             }
 
-            if (e.KeyChar == 46)
+            if (e.KeyChar == 45/*(char)Keys.Space*/)
             {
                 Point ami_posi = pic_amigo.Location;
                 Point ene_posi = pic_enemigo.Location;
 
                 Balas bala = new Balas();
-                bala.disparo(ami_posi, ene_posi);
+                puntos = puntos + (bala.disparo(ami_posi, ene_posi) * nivel);
 
-
+                lbl_puntos.Text = "Puntos: " + puntos;
             }
         }
     }
